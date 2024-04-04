@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/styles.css">
+    <meta charset="UTF-8">
+    <title>Список участников</title>
+</head>
+<body class="home">
+<a href="/"><button>Дом Клуба</button></a>
+<a href="/auth-form"><button>Подать заявку</button></a>
+
+<div class="fingerdiv">
+<table border="1" class="tabloid">
+  <thead>
+  <tr>
+    <th>Имя</th>
+    <th>Фамилия</th>
+    <th>Курс</th>
+    <th>Уровень ступени</th>
+    <th>Факультет</th>
+  </tr>
+</thead>
+
+<tbody>
+
+  <tr>
+
+{% for text in students %}
+    <td>{{text.name}}</td>
+    <td>{{text.lastname}}</td>
+    <td>{{text.curse}}</td>
+    <td>{{text.level}}</td>
+    <td>{{text.faculty}}</td>
+      </tr>
+{% endfor %}
+
+</tbody>
+</table>
+</div>
+
+</body>
+</html>
